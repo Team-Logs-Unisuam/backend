@@ -1,66 +1,120 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1> Principais comandos Laravel </h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- [Comandos](#comandos)
+- [Artisan](#artisan) 
+- [Migrations](#migrations)
+- [Seeders](#seeders)
+- [Tinker](#tinker)
+- [Model](#model)
+- [Controller](#controller)
+- [Request](#request)
+- [Middleware](#middleware)
+- [Routes](#routes)
+- [Views](#views)
+- [Blade](#blade)
+- [Auth](#auth)
+- [Storage](#storage)
+- [Helpers](#helpers)
+- [Collections](#collections)
+- [Eloquent](#eloquent)
 
-## About Laravel
+## Comandos 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Artisan 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- `php artisan list` - Lista todos os comandos disponíveis.
+- `php artisan make:controller NomeController` - Cria um novo controller.
+- `php artisan make:model NomeModel` - Cria um novo model.
+- `php artisan make:request NomeRequest` - Cria um novo request.
+- `php artisan make:middleware NomeMiddleware` - Cria um novo middleware.
+- `php artisan make:seeder NomeSeeder` - Cria um novo seeder.
+- `php artisan make:migration create_nome_tabela_table` - Cria uma nova migration.
+- `php artisan migrate` - Executa todas as migrations pendentes.
+- `php artisan migrate:rollback` - Reverte a última migração.
+- `php artisan migrate:reset` - Reverte todas as migrações.
+- `php artisan migrate:refresh` - Reverte e executa todas as migrações.
+- `php artisan db:seed` - Executa todos os seeders.
+- `php artisan tinker` - Inicia o tinker.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Migrations 
 
-## Learning Laravel
+- `php artisan make:migration create_nome_tabela_table` - Cria uma nova migration.
+- `php artisan migrate` - Executa todas as migrations pendentes.
+- `php artisan migrate:rollback` - Reverte a última migração.
+- `php artisan migrate:reset` - Reverte todas as migrações.
+- `php artisan migrate:refresh` - Reverte e executa todas as migrações.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Seeders 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- `php artisan make:seeder NomeSeeder` - Cria um novo seeder.
+- `php artisan db:seed` - Executa todos os seeders.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Tinker 
 
-## Laravel Sponsors
+- `php artisan tinker` - Inicia o tinker.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Model 
 
-### Premium Partners
+- `php artisan make:model NomeModel` - Cria um novo model.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Controller 
 
-## Contributing
+- `php artisan make:controller NomeController` - Cria um novo controller.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Request 
 
-## Code of Conduct
+- `php artisan make:request NomeRequest` - Cria um novo request.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Middleware 
 
-## Security Vulnerabilities
+- `php artisan make:middleware NomeMiddleware` - Cria um novo middleware.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Routes 
 
-## License
+- `Route::get('/', function () { return view('welcome'); });` - Rota de exemplo.
+- `Route::resource('nome', 'NomeController');` - Rota de recurso.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Views 
+
+- `return view('nome');` - Retorna a view nome.blade.php.
+
+### Blade 
+
+- `@yield('content')` - Define uma seção.
+- `@section('content')` - Exibe uma seção.
+- `@extends('layout')` - Herda um layout.
+- `@include('nome')` - Inclui uma view.
+
+### Auth 
+
+- `php artisan make:auth` - Cria a autenticação.
+
+### Storage 
+
+- `Storage::disk('local')->put('file.txt', 'Contents');` - Armazena um arquivo.
+
+### Helpers 
+
+- `str_random(10)` - Gera uma string aleatória.
+
+### Collections 
+
+- `collect([1, 2, 3, 4])->all();` - Converte a coleção em um array.
+
+### Eloquent 
+
+- `Model::all();` - Retorna todos os registros.
+- `Model::find(1);` - Retorna o registro com base no id.
+- `Model::where('campo', 'valor')->get();` - Retorna os registros com base no campo e valor.
+- `Model::create(['campo' => 'valor']);` - Cria um novo registro.
+- `Model::update(['campo' => 'valor']);` - Atualiza os registros com base no campo e valor.
+- `Model::delete();` - Deleta os registros.
+- `Model::destroy(1);` - Deleta o registro com base no id.
+- `Model::count();` - Retorna a quantidade de registros.
+- `Model::orderBy('campo', 'asc')->get();` - Ordena os registros de forma ascendente.
+- `Model::orderBy('campo', 'desc')->get();` - Ordena os registros de forma descendente.
+- `Model::limit(10)->get();` - Limita a quantidade de registros.
+- `Model::paginate(10);` - Pagina os registros.
+
+
+
